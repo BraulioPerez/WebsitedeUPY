@@ -5,7 +5,10 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" type="text/css" href="styles.css">
 	<link rel="" type="text/css" href="styles.css">
-	
+	<!--- Estos son los links de la pagina del carrusel donde lo saque---->
+	<link rel="stylesheet" type="text/css" href="splide-4.1.3/dist/css/splide.min.css">
+	<script src="splide-4.1.3/dist/js/splide.min.js"></script>
+
 	<title>UPY | Universidad Politécnica de Yucatán</title>
 	
 	<link href="https://cdn.jsdelivr.net/npm/remixicon@3.4.0/fonts/remixicon.css" rel="stylesheet">
@@ -18,7 +21,6 @@
 <body>
 	<header>
 		<a href="#" class="logo"><i class="ri-home-line"></i><span>UPY</span></a>
-
 		<ul class="navbar">
 			<li><a href="#" class="active">Inicio</a></li>
 			<li><a href="#">La upy</a></li>
@@ -26,13 +28,62 @@
 			<li><a href="#">Sistema Bis</a></li>
 			<li><a href="#">Profesores</a></li>
 		</ul>
-
+<!-- Video sacado de la upy -->
 		<div class="main">
 			<div class="bx bx-menu" id="menu-icon"></div>
 		</div>
 	</header>
-
 	<script type="text/javascript" src="js/script.js"></script>
+<main id="upy">
+	<video muted autoplay loop>
+		<source src="Video/Promo.mp4" type="video/mp4">
+			<div class="capa"></div>
+	</video>
+</main>
+<!-- Carreras yo digo que esto si quedo bien -->
+<div class="banner">
+<h1>Carreras</h1>
+<div class="carreras-botones">
+	<div = class="button"> <img src="Imagen/Cibersecurity.webp">
+		<span>Ciberseguridad</span>
+	</div>
+	<div = class="button"> <img src="Imagen/Datos.webp">
+		<span>Datos</span>
+	</div>
+	<div = class="button"> <img src="Imagen/Embebidos.webp">
+		<span> Sistema Embebidos</span>
+	</div>
+	<div = class="button"> <img src="Imagen/Robotica.webp">
+		<span>Robotica Computacional</span>
+	</div>
+</div>
+</div>
+<!-- Carrusel -->
+	<div class="carrusel">
+		<div class="splide">
+  <div class="splide__track">
+    <ul class="splide__list">
+      <li class="splide__slide"><img src="Imagen/uno.webp"></li>
+      <li class="splide__slide"><img src="Imagen/dos.webp"></li>
+      <li class="splide__slide"><img src="Imagen/tres.webp"></li>
+      <li class="splide__slide"><img src="Imagen/cuatro.webp"></li>
+      <li class="splide__slide"><img src="Imagen/cinco.webp"></li>
+      <li class="splide__slide"><img src="Imagen/seis.webp"></li>
+      <li class="splide__slide"><img src="Imagen/siete.webp"></li>
+      <li class="splide__slide"><img src="Imagen/ocho.webp"></li>
+    </ul>
+  </div>
+</div>
+</div>
+<!--- Se que esto va en js pero no lo agarraba asi que me moleste y lo deje aqui---->	
+<script>
+var splide = new Splide( '.splide', {
+  type: 'fade',
+  rewind: true,
+  interval: '2000'
+} );
 
-</body>
+splide.mount()
+</script>
+</body> 
 </html>

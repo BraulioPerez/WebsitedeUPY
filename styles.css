@@ -157,5 +157,132 @@ header {
 	.navbar.open{
 		right: 2%;
 	}
-}	
+/* el video se ajusta a la pagina pero hace que aparezca un slide */
+#upy{
+	min-height: 100vh;
+	position: relative;
+	position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
+video {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	z-index: -3;
+	overflow: hidden;
+}
+.video video{
+	position: relative;
+	top: 50%;
+	left: 50%;
+	object-fit: cover;
+	width: 100%;
+	transform: translateX(-50%);
+	transform: translateY(-50%);
+}
+}
+/* es la base del video para que haya un contraste*/
+.capa{
+	position: absolute;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background: #1c1c1d;
+	opacity: 0.5;
+	mix-blend-mode: overlay;
+}
+/* quiero que el banner sea mas pequeno pero ya me rendi por hoy, asi que si no se si lo puedas solucionar */
+
+.banner {
+	background-color: #7F7CAF;
+	text-align: center;
+	padding: 50px;
+}
+
+.banner h1{
+	font-size: 36px;
+	margin-bottom: 10px;
+}
+
+.carreras-botones {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+/* los botones ya se ajustaron por completo use flex por senti que era el indicado */
+
+.button{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	background-color: #540d6e;
+	color: #fff;
+	text-decoration: none;
+	font-size:  18px;
+	padding: 10px 20px;
+	margin: 30px 15px;
+	border-radius: 10px;
+	cursor: pointer;
+	flex:0 0 400px ;
+	transition: transform 0.3s ease;
+	
+}
+
+.button img{
+	width: 100px;
+	height: 100px;
+	border-radius: 50px;
+	margin-bottom: 10px;
+}
+/* aqui esta el cursor ya que dijiste que lo ibas a modificar para que no tardes buscandolo */
+.button:hover{
+	background:#ff7f11;
+	color: #007bff;
+}
+
+@media screen and (max-width: 768px){
+	.carreras-botones{
+		flex-flow: wrap;
+	}
+	.button img {
+		width: 60px;
+		height: 60px;
+	}
+	.button span {
+		font-size: 16px;
+	}
+	.button{
+		font-size: 50px;
+		padding: 20px 60px;
+		margin:50px 15px ;
+		transform: scale(1.5);
+	}
+}
+
+ /*Sigue se ajusto pero no se si les guste*/
+
+ .carrusel{
+ 	width: 80%;
+ 	height: 100%;
+ 	background: #7F7CAF;
+ 	padding: 15px;
+ 	margin: 50px auto;
+ 	position: relative;
+  	display: flex;
+  	justify-content: center;
+  	align-items: center;
+  	overflow: hidden;
+ }
+img{
+ width: 100%;
+  height: 100%;
+  object-fit: cover;
+  cursor: pointer;
+  max-width: 100%;
+}
