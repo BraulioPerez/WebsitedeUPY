@@ -104,8 +104,9 @@ video {
 }
 
 .card-container {
-	max-width: 50%;
+	max-width: 90%;
 	display: flex;
+	flex-wrap: wrap;
 	flex-direction: row;
 	justify-content: center;
 	column-gap: 50px;
@@ -120,10 +121,9 @@ video {
 	height: 400px;
 	margin: 10px;
 	color: var(--sec-color);
-	box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px;
+	box-shadow: 0 5px 15px 0px rgba(255, 200, 255,0.3);
 	border-radius: 15px;
 	transition: all .50s ease;
-
 }
 
 .card-image {
@@ -157,7 +157,7 @@ video {
 }
 
 .card:hover {
-	box-shadow: 0 5px 15px 0px rgba(0,30,0,0.8);
+	box-shadow: rgba(255, 200, 255, 0.25) 0px 50px 100px -20px;
 	transform: translatey(0px);
 	margin-top: -5px;
 	transform: scale(1.05);
@@ -165,18 +165,43 @@ video {
 }
 
 .main-container {
-	display: grid;
-	grid-template-columns: auto auto;
-	max-width: 100%;
+	width: auto;
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap ;
 }
 
 .columna {
-	margin: 10px;
-	padding: 10vh;
-	height: 100vh;
+	padding: 5vh;
+	width: auto;
 }
 
 
+.carousel {
+	display: flex;
+	justify-content: center;
+	aspect-ratio: 16/9;
+	margin-top: 5vh;
+	transition: all .50s ease;
+	width: 90vh;
+	max-width: 90vh;
+}
+
+.carousel img{
+	aspect-ratio: 16 / 9;
+}
+
+.carousel:hover {
+	box-shadow: rgba(255, 200, 255, 2) 0px 10px 20px, rgba(255, 200, 255, 10) 0px 6px 6px;
+}
+
+.calendario {
+	margin-top: 10vh;
+	aspect-ratio: 186/267;
+	transition: all .50s ease;
+	width: 90vh;
+	max-width: 90vh;
+}
 
 /*esto tiene que estar hasta abajo para que todo lo que queramos que se modifique según el tamaño aplique*/
 
@@ -192,7 +217,8 @@ video {
 
 	}
 	.card-container {
-		column-gap: 40px;
+		flex-wrap: wrap;
+		column-gap: 20px;
 	}
 }
 
@@ -200,6 +226,7 @@ video {
 	#menu-icon{
 		display: block;
 	}
+
 	.navbar {
 		position: absolute;
 		top: 110%;
